@@ -13,4 +13,6 @@
         </p>
 
     @endforeach
+
+    {{ $posts->links() }}
 @endsection
