@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'jacajali@gmail.com',
             'password' => bcrypt('carlos0723'),
         ]);
-        User::factory(5)->create(); //Crear 5 usuarios falso
+        //User::factory(5)->create(); //Crear 5 usuarios falso
         Post::factory(80)->create();
     }
 }
