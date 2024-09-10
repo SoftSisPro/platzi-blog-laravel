@@ -9,6 +9,12 @@
     <p>
         <a href="{{ route('home') }}">Home</a>
         <a href="{{ route('blog') }}">Blog</a>
+
+        @auth
+            <a href="{{ route('dashboard') }}">Admin</a>
+        @else
+            <a href="{{ route('login') }}">Iniciar sesión</a>
+        @endauth
     </p>
     <hr>
     @yield('content')
