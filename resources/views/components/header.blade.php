@@ -4,7 +4,7 @@
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight flex items-center justify-between">
             {{ $title ?? "Dashboard" }}
             @if(request()->routeIs('posts.index'))
-                <a href="{{ route('posts.create') }}" class="bg-blue-500 text-white rounded px-2 py-1 text-xs">Crear Post</a>
+                <a href="{{ route('posts.create') }}" class="bg-blue-500 text-white rounded px-3 py-2 text-xs">Crear Post</a>
             @endif
         </h2>
     </x-slot>
