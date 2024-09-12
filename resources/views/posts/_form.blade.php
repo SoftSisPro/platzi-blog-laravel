@@ -1,9 +1,12 @@
 @csrf
 
 <label class="uppercase text-gray-700 text-xs">Titulo</label>
+<span class="text-red-600 text-xs">@error('title') {{ $message }} @enderror</span>
 <input type="text" name="title" class="rounded bg-gray-100 border-gray-200 w-full mb-4" placeholder="Escriba el Titulo de Post" value="{{ old('title', $post->title??null) }}">
 
+
 <label class="uppercase text-gray-700 text-xs">Contenido</label>
+<span class="text-red-600 text-xs">@error('body') {{ $message }} @enderror</span>
 <textarea name="body" rows="5" class="rounded bg-gray-100 border-gray-200 w-full mb-4" placeholder="Escriba el Contenido del Post">
     {{ old('body', $post->body??null) }}
 </textarea>
