@@ -14,6 +14,7 @@ class PageController extends Controller
         //$posts = Post::latest()->paginate();
         //- Con el buscador
         $posts = Post::where('title', 'LIKE', "%$search%")
+            ->with('user')
             ->latest()
             ->paginate(10);
 

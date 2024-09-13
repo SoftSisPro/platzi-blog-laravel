@@ -17,10 +17,11 @@
                 <p class="text-xs flex items-center gap-2">
                     <span class="uppercase text-gray-700 bg-gray-200 px-3 py-1 rounded-full">Publicación</span>
                     <span>{{ $post->created_at->format('d/m/Y') }}</span>
-
                 </p>
-
                 <h2 class='mt-2 text-lg text-gray-900'>{{ $post->title}}</h2>
+                <div class='text-xs text-gray-900 opacity-75 flex items-center gap-1 mt-2'>
+                    <i class='fas fa-user-pen fa-fw'></i> {{ $post->user->name }}
+                </div>
             </a>
         @endforeach
     </div>

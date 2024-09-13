@@ -10,13 +10,7 @@ Route::controller(PageController::class)->group(function () {
     Route::get('/blog/{post:slug}', 'post')->name('post');
 });
 
-/*
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-*/
-
-Route::get('/dashboard', [PostController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::redirect('dashboard','posts')->name('dashboard');
 
 //- Creamos la ruta posts
 Route::resource('posts', PostController::class)->except('show')->middleware(['auth', 'verified']);
